@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productora Creativa</title>
+    <link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- Menú -->
+        <nav id="menu" class="menu">
+            <ul>
+                <li>
+                    <img src="images/logo.png" id="logo">
+                </li>
+                <li><a href="#" onclick="mostrarSeccion('home')">Inicio</a></li>
+                <li><a href="#" onclick="mostrarSeccion('about')">Quienes somos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('work')">Proyectos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('texts')">Textos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('contact')">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido -->
+        <main id="content" class="content">
+            <section id="home" class="seccion visible">
+                <h1>Bienvenidos a nuestra Productora</h1>
+            </section>
+
+            <section id="about" class="seccion">
+                <h1>Sobre Nosotros</h1>
+                <p>Somos una productora dedicada a contar historias visuales.</p>
+            </section>
+
+            <section id="work" class="seccion">
+                <div class="proyectos-container">
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 1">
+                        <h3>Autor: Juan Pérez</h3>
+                        <p>Un cortometraje que explora la identidad y el autoconocimiento.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 2">
+                        <h3>Autor: María López</h3>
+                        <p>Una serie de fotografías que capturan la belleza de lo cotidiano.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 3">
+                        <h3>Autor: Carlos García</h3>
+                        <p>Un documental sobre la resiliencia de las comunidades rurales.</p>
+                    </div>
+                </div>
+                <div class="proyectos-container">
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 1">
+                        <h3>Autor: Juan Pérez</h3>
+                        <p>Un cortometraje que explora la identidad y el autoconocimiento.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 2">
+                        <h3>Autor: María López</h3>
+                        <p>Una serie de fotografías que capturan la belleza de lo cotidiano.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 3">
+                        <h3>Autor: Carlos García</h3>
+                        <p>Un documental sobre la resiliencia de las comunidades rurales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="seccion">
+                <h1>Contacto</h1>
+                <p>¡Hablemos de tu próximo proyecto!</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
