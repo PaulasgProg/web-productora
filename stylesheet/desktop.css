@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     transition: all 0.5s ease;
     font-family: "Patrick Hand SC", cursive;
     font-weight: 400;
@@ -36,7 +36,8 @@ body {
 
 /* Menú inicialmente centrado */
 .menu {
-    position: absolute;
+    display: block;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -44,6 +45,7 @@ body {
     padding: 30px;
     transition: all 0.5s ease;
     height: 100vh;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
 }
 
 .menu ul {
@@ -66,6 +68,50 @@ body {
 .menu ul li a:hover {
     color: #144d7b; /* Rojo persa #c93b3c*/
     font-size: 24px;
+}
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none; /* Se oculta en pantallas grandes */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .content{
+        display: none;
+    }
+    .menu {
+        /*transform: translateX(-100%); /* Oculta el menú */
+        display: block;
+        width: 100%;
+
+
+    }
+
+    /* Asegurar que el botón hamburguesa sea visible */
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Ocultar el botón en pantallas grandes */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none;
+    }
+    .menu.show {
+        transform: translateX(0); /* Lo muestra cuando está activo */
+        display: block;
+        width: auto;
+    }
 }
 
 /* Logo */
@@ -97,8 +143,15 @@ body {
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    min-height: 100vh; /* Hace que cada sección ocupe al menos toda la pantalla */
+    margin-left: 20%;
+    margin-top: 30%;
 }
-
+@media (max-width: 768px) {
+    .seccion {
+        margin-left: 0;
+    }
+}
 .seccion.visible {
     display: block;
     opacity: 1;
@@ -106,7 +159,7 @@ body {
 
 /* Cuando se selecciona una opción, el menú se mueve a la izquierda */
 .menu.move-left {
-    position: relative;
+    position: fixed;
     left: 0%;
     transform: translateX(0);
     width: 20%;

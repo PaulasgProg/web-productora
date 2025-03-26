@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productora Creativa</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="./stylesheet/desktop.css">
 
 </head>
 <body>
 
     <div class="container">
+        <!-- Botón de menú hamburguesa -->
+        <button id="menu-toggle" class="menu-toggle">&#9776;</button>
         <!-- Menú -->
         <nav id="menu" class="menu">
             <ul>
@@ -22,7 +24,10 @@
                 <li><a href="#" onclick="mostrarSeccion('texts')">Textos</a></li>
                 <li><a href="#" onclick="mostrarSeccion('contact')">Contacto</a></li>
             </ul>
+            
+
         </nav>
+
 
         <!-- Contenido -->
         <main id="content" class="content">
@@ -36,6 +41,23 @@
             </section>
 
             <section id="work" class="seccion">
+                <div class="proyectos-container">
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 1">
+                        <h3>Autor: Juan Pérez</h3>
+                        <p>Un cortometraje que explora la identidad y el autoconocimiento.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 2">
+                        <h3>Autor: María López</h3>
+                        <p>Una serie de fotografías que capturan la belleza de lo cotidiano.</p>
+                    </div>
+                    <div class="proyecto">
+                        <img src="images/logo.png" alt="Proyecto 3">
+                        <h3>Autor: Carlos García</h3>
+                        <p>Un documental sobre la resiliencia de las comunidades rurales.</p>
+                    </div>
+                </div>
                 <div class="proyectos-container">
                     <div class="proyecto">
                         <img src="images/logo.png" alt="Proyecto 1">
