@@ -1,6 +1,7 @@
 function mostrarSeccion(id) {
     const menu = document.getElementById("menu");
     const content = document.getElementById("content");
+    const menuToggle = document.getElementById("menu-toggle");
 
     // Mover el menú a la izquierda
     menu.classList.add("move-left");
@@ -18,6 +19,7 @@ function mostrarSeccion(id) {
         menu.style.width="100%"
         menu.style.transform="translateX(-100%)"
         menu.classList.remove("show")
+        menuToggle.style.color="black"
     }else{
         menu.style.display="block"
         menu.style.width="auto"
@@ -72,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.style.display="block"
         menu.style.width="100%"
         menu.style.transform="translateX(0)"
+        menuToggle.style.color="white"
         menu.classList.add("show")
         
     });

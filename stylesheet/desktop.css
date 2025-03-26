@@ -27,11 +27,11 @@ body {
 /* Contenedor principal */
 .container {
     display: flex;
-    align-items: center;
+    align-items:start;
     width: 100%;
     height: 100vh;
     transition: all 0.5s ease;
-    background-color: whitesmoke;
+    background-color: aliceblue;
 }
 
 /* Menú inicialmente centrado */
@@ -91,14 +91,16 @@ body {
         /*transform: translateX(-100%); /* Oculta el menú */
         display: block;
         width: 100%;
-
-
     }
 
     /* Asegurar que el botón hamburguesa sea visible */
     .menu-toggle {
         display: block;
     }
+    .seccion{
+        margin-top: auto;
+    }
+
 }
 
 /* Ocultar el botón en pantallas grandes */
@@ -135,6 +137,7 @@ body {
     padding: 50px;
     background: aliceblue; /* Fondo negro para el contenido */
     text-align: center;
+
 }
 
 /* Secciones */
@@ -145,7 +148,7 @@ body {
     transition: opacity 0.5s ease-in-out;
     min-height: 100vh; /* Hace que cada sección ocupe al menos toda la pantalla */
     margin-left: 20%;
-    margin-top: 30%;
+    margin-top: auto;
 }
 @media (max-width: 768px) {
     .seccion {
